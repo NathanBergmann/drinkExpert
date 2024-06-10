@@ -1,0 +1,733 @@
+[
+    {
+        "name": "Mojito",
+        "baseDrink": "Rum",
+        "ingredientes": [
+            {
+                "nome": "Rum",
+                "quantidade": 50,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Hortelã",
+                "quantidade": 10,
+                "unidade": "folhas"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 30,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Açúcar",
+                "quantidade": 2,
+                "unidade": "colheres de chá"
+            },
+            {
+                "nome": "Água com gás",
+                "quantidade": 100,
+                "unidade": "ml"
+            }
+        ],
+        "modoPreparo": "Macere a hortelã com o açúcar e o suco de limão. Adicione o rum, gelo e complete com água com gás.",
+        "caracteristica": "Refrescante"
+    },
+    {
+        "name": "Caipirinha",
+        "baseDrink": "Cachaça",
+        "ingredientes": [
+            {
+                "nome": "Cachaça",
+                "quantidade": 50,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Limão",
+                "quantidade": 1,
+                "unidade": "unidade"
+            },
+            {
+                "nome": "Açúcar",
+                "quantidade": 2,
+                "unidade": "colheres de chá"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 5,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Corte o limão em pedaços, macere com o açúcar, adicione a cachaça e o gelo. Misture bem.",
+        "caracteristica": "Tradicional"
+    },
+    {
+        "name": "Margarita",
+        "baseDrink": "Tequila",
+        "ingredientes": [
+            {
+                "nome": "Tequila",
+                "quantidade": 50,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Triple Sec",
+                "quantidade": 20,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 30,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Sal",
+                "quantidade": 1,
+                "unidade": "pitada"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 5,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Passe o limão na borda do copo e depois no sal. Bata os ingredientes com gelo e sirva.",
+        "caracteristica": "Cítrico"
+    },
+    {
+        "name": "Martini",
+        "baseDrink": "Gin",
+        "ingredientes": [
+            {
+                "nome": "Gin",
+                "quantidade": 60,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Vermute seco",
+                "quantidade": 10,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Azeitona",
+                "quantidade": 1,
+                "unidade": "unidade"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 3,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Misture o gin e o vermute com gelo, coe e sirva em uma taça com uma azeitona.",
+        "caracteristica": "Clássico"
+    },
+    {
+        "name": "Piña Colada",
+        "baseDrink": "Rum",
+        "ingredientes": [
+            {
+                "nome": "Rum",
+                "quantidade": 50,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de abacaxi",
+                "quantidade": 100,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Leite de coco",
+                "quantidade": 50,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 5,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Bata todos os ingredientes no liquidificador com gelo e sirva.",
+        "caracteristica": "Doce"
+    },
+    {
+        "name": "Bloody Mary",
+        "baseDrink": "Vodka",
+        "ingredientes": [
+            {
+                "nome": "Vodka",
+                "quantidade": 45,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de tomate",
+                "quantidade": 90,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 15,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Molho inglês",
+                "quantidade": 2,
+                "unidade": "gotas"
+            },
+            {
+                "nome": "Molho de pimenta",
+                "quantidade": 2,
+                "unidade": "gotas"
+            },
+            {
+                "nome": "Sal",
+                "quantidade": 1,
+                "unidade": "pitada"
+            },
+            {
+                "nome": "Pimenta",
+                "quantidade": 1,
+                "unidade": "pitada"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 5,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Misture todos os ingredientes com gelo, coe e sirva.",
+        "caracteristica": "Picante"
+    },
+    {
+        "name": "Cosmopolitan",
+        "baseDrink": "Vodka",
+        "ingredientes": [
+            {
+                "nome": "Vodka",
+                "quantidade": 45,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Triple Sec",
+                "quantidade": 15,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de cranberry",
+                "quantidade": 30,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 10,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 5,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Bata todos os ingredientes com gelo, coe e sirva em uma taça de cocktail.",
+        "caracteristica": "Elegante"
+    },
+    {
+        "name": "Whiskey Sour",
+        "baseDrink": "Whiskey",
+        "ingredientes": [
+            {
+                "nome": "Whiskey",
+                "quantidade": 50,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 25,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Açúcar",
+                "quantidade": 1,
+                "unidade": "colher de chá"
+            },
+            {
+                "nome": "Clara de ovo",
+                "quantidade": 1,
+                "unidade": "unidade"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 5,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Bata todos os ingredientes com gelo, coe e sirva.",
+        "caracteristica": "Equilibrado"
+    },
+    {
+        "name": "Mai Tai",
+        "baseDrink": "Rum",
+        "ingredientes": [
+            {
+                "nome": "Rum",
+                "quantidade": 40,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Rum escuro",
+                "quantidade": 20,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Triple Sec",
+                "quantidade": 15,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 10,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Xarope de amêndoa",
+                "quantidade": 10,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 5,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Misture todos os ingredientes com gelo, coe e sirva em um copo cheio de gelo.",
+        "caracteristica": "Exótico"
+    },
+    {
+        "name": "Daiquiri",
+        "baseDrink": "Rum",
+        "ingredientes": [
+            {
+                "nome": "Rum",
+                "quantidade": 45,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 25,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Xarope de açúcar",
+                "quantidade": 15,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 5,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Bata todos os ingredientes com gelo, coe e sirva em uma taça de cocktail.",
+        "caracteristica": "Refrescante"
+    },
+    {
+        "name": "Old Fashioned",
+        "baseDrink": "Whiskey",
+        "ingredientes": [
+            {
+                "nome": "Whiskey",
+                "quantidade": 45,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Açúcar",
+                "quantidade": 1,
+                "unidade": "colher de chá"
+            },
+            {
+                "nome": "Angostura",
+                "quantidade": 2,
+                "unidade": "gotas"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 1,
+                "unidade": "cubo"
+            },
+            {
+                "nome": "Laranja",
+                "quantidade": 1,
+                "unidade": "casca"
+            }
+        ],
+        "modoPreparo": "Dissolva o açúcar na angostura, adicione o whiskey e o gelo. Decore com a casca de laranja.",
+        "caracteristica": "Clássico"
+    },
+    {
+        "name": "Manhattan",
+        "baseDrink": "Whiskey",
+        "ingredientes": [
+            {
+                "nome": "Whiskey",
+                "quantidade": 50,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Vermute doce",
+                "quantidade": 20,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Angostura",
+                "quantidade": 1,
+                "unidade": "gota"
+            },
+            {
+                "nome": "Cereja",
+                "quantidade": 1,
+                "unidade": "unidade"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 3,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Misture o whiskey, vermute e angostura com gelo, coe e sirva em uma taça com uma cereja.",
+        "caracteristica": "Sofisticado"
+    },
+    {
+        "name": "Mint Julep",
+        "baseDrink": "Whiskey",
+        "ingredientes": [
+            {
+                "nome": "Whiskey",
+                "quantidade": 60,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Hortelã",
+                "quantidade": 10,
+                "unidade": "folhas"
+            },
+            {
+                "nome": "Açúcar",
+                "quantidade": 1,
+                "unidade": "colher de chá"
+            },
+            {
+                "nome": "Água",
+                "quantidade": 10,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 3,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Macere a hortelã com o açúcar e a água, adicione o whiskey e o gelo. Misture bem.",
+        "caracteristica": "Refrescante"
+    },
+    {
+        "name": "Pisco Sour",
+        "baseDrink": "Pisco",
+        "ingredientes": [
+            {
+                "nome": "Pisco",
+                "quantidade": 60,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 30,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Açúcar",
+                "quantidade": 2,
+                "unidade": "colheres de chá"
+            },
+            {
+                "nome": "Clara de ovo",
+                "quantidade": 1,
+                "unidade": "unidade"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 3,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Bata todos os ingredientes com gelo, coe e sirva.",
+        "caracteristica": "Equilibrado"
+    },
+    {
+        "name": "Tom Collins",
+        "baseDrink": "Gin",
+        "ingredientes": [
+            {
+                "nome": "Gin",
+                "quantidade": 60,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 30,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Xarope de açúcar",
+                "quantidade": 15,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Água com gás",
+                "quantidade": 100,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 3,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Misture o gin, suco de limão e xarope de açúcar com gelo, complete com água com gás.",
+        "caracteristica": "Refrescante"
+    },
+    {
+        "name": "Negroni",
+        "baseDrink": "Gin",
+        "ingredientes": [
+            {
+                "nome": "Gin",
+                "quantidade": 30,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Vermute doce",
+                "quantidade": 30,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Campari",
+                "quantidade": 30,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 3,
+                "unidade": "cubos"
+            },
+            {
+                "nome": "Laranja",
+                "quantidade": 1,
+                "unidade": "casca"
+            }
+        ],
+        "modoPreparo": "Misture todos os ingredientes com gelo, coe e sirva em um copo com uma casca de laranja.",
+        "caracteristica": "Amargo"
+    },
+    {
+        "name": "Mai Tai",
+        "baseDrink": "Rum",
+        "ingredientes": [
+            {
+                "nome": "Rum",
+                "quantidade": 40,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Rum escuro",
+                "quantidade": 20,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Triple Sec",
+                "quantidade": 15,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 10,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Xarope de amêndoa",
+                "quantidade": 10,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 5,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Misture todos os ingredientes com gelo, coe e sirva em um copo cheio de gelo.",
+        "caracteristica": "Exótico"
+    },
+    {
+        "name": "Sazerac",
+        "baseDrink": "Whiskey",
+        "ingredientes": [
+            {
+                "nome": "Whiskey",
+                "quantidade": 60,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Absinto",
+                "quantidade": 10,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Açúcar",
+                "quantidade": 1,
+                "unidade": "colher de chá"
+            },
+            {
+                "nome": "Angostura",
+                "quantidade": 2,
+                "unidade": "gotas"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 3,
+                "unidade": "cubos"
+            },
+            {
+                "nome": "Limão",
+                "quantidade": 1,
+                "unidade": "casca"
+            }
+        ],
+        "modoPreparo": "Misture o whiskey, açúcar e angostura com gelo, coe e sirva em um copo lavado com absinto. Decore com a casca de limão.",
+        "caracteristica": "Forte"
+    },
+    {
+        "name": "Sidecar",
+        "baseDrink": "Cognac",
+        "ingredientes": [
+            {
+                "nome": "Cognac",
+                "quantidade": 50,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Triple Sec",
+                "quantidade": 20,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 20,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 5,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Bata todos os ingredientes com gelo, coe e sirva em uma taça de cocktail.",
+        "caracteristica": "Clássico"
+    },
+    {
+        "name": "Moscow Mule",
+        "baseDrink": "Vodka",
+        "ingredientes": [
+            {
+                "nome": "Vodka",
+                "quantidade": 45,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 15,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Cerveja de gengibre",
+                "quantidade": 120,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 5,
+                "unidade": "cubos"
+            },
+            {
+                "nome": "Hortelã",
+                "quantidade": 1,
+                "unidade": "ramo"
+            }
+        ],
+        "modoPreparo": "Misture a vodka e o suco de limão com gelo, complete com cerveja de gengibre. Decore com hortelã.",
+        "caracteristica": "Refrescante"
+    },
+    {
+        "name": "Gin Fizz",
+        "baseDrink": "Gin",
+        "ingredientes": [
+            {
+                "nome": "Gin",
+                "quantidade": 45,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 30,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Xarope de açúcar",
+                "quantidade": 15,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Água com gás",
+                "quantidade": 60,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 3,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Bata o gin, suco de limão e xarope de açúcar com gelo, coe e complete com água com gás.",
+        "caracteristica": "Refrescante"
+    },
+    {
+        "name": "French 75",
+        "baseDrink": "Gin",
+        "ingredientes": [
+            {
+                "nome": "Gin",
+                "quantidade": 30,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Suco de limão",
+                "quantidade": 15,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Xarope de açúcar",
+                "quantidade": 10,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Champanhe",
+                "quantidade": 60,
+                "unidade": "ml"
+            },
+            {
+                "nome": "Gelo",
+                "quantidade": 3,
+                "unidade": "cubos"
+            }
+        ],
+        "modoPreparo": "Misture o gin, suco de limão e xarope de açúcar com gelo, coe e complete com champanhe.",
+        "caracteristica": "Elegante"
+    }
+]

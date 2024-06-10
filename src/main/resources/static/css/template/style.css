@@ -1,0 +1,16 @@
+
+
+#divEsquerda {
+    height: auto;
+    width: 150px;
+    float: left;
+    background-color: yellow;
+    
+}
+#divDireita {
+    height: auto;
+    width: 150px;
+    float: right;
+    background-color: yellow;
+    
+}

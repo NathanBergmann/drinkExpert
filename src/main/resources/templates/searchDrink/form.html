@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head  th:replace="template :: htmlhead">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Drink</title>
+</head>
+<body class="d-flex justify-content-center vh-100">
+    <div class="container">
+        <form th:action="@{/searchDrink}"
+            method="post"
+        >
+            <div class="mb-3 ">
+                <label class="form-label">Selecione a base alcoolica</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="mb-3 ">
+                <label class="form-label">Selecione algum ingredientes</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="mb-3 ">
+                <label class="form-label">Selecione uma caracteristica do Drink</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
