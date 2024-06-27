@@ -1,6 +1,7 @@
 package br.univille.drinkexpert.service;
 
 import br.univille.drinkexpert.entity.Drink;
+import br.univille.drinkexpert.entity.DrinkCatalog;
 import br.univille.drinkexpert.entity.Ingrediente;
 import br.univille.drinkexpert.repository.DrinkRepository;
 import jakarta.annotation.PostConstruct;
@@ -16,7 +17,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import javax.json.Json;
 import javax.json.JsonArray;
@@ -24,6 +28,8 @@ import javax.json.JsonObject;
 import javax.json.JsonReader;
 @Service
 public class DrinkService {
+
+    private List<Drink> drinkList = new ArrayList<Drink>();
 
     @Autowired
     private DrinkRepository drinkRepository;
@@ -34,15 +40,13 @@ public class DrinkService {
     }
 
     public void loadDrinksFromJson() {
-        Drink drinkList = new Drink();
+
          File file = new File("src/main/java/br/univille/drinkexpert/repository/database.json");
         try (JsonReader reader = Json.createReader(new FileReader(file.getAbsolutePath()))){
             // Lê o JSON em um objeto JsonObject
             JsonArray drinks = reader.readArray();
-
             // Percorre cada objeto no array JSON
             for (JsonObject drink : drinks.getValuesAs(JsonObject.class)) {
-                // Obtém o número e o naipe da carta
                 String nome = drink.getString("name");  
                 String baseDrink = drink.getString("baseDrink");
                 String modoPreparo = drink.getString("modoPreparo");
@@ -59,27 +63,41 @@ public class DrinkService {
                 }
     
                 Drink newDrink = new Drink(nome, baseDrink, modoPreparo, caracteristica, listaIngredientes);
-                drinkList.addDrink(newDrink);
+                drinkList.add(newDrink);
             }
-            System.out.println("lista" + drinkList);
-        } catch (FileNotFoundException e) {
+             System.out.println("lista" + getBaseDrinkList());
+            } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+    
+    public List<String> getBaseDrinkList() {
+        List<String> baseDrinkList = this.drinkList.stream()
+            .map(Drink::getBaseDrink) // Mapeia cada Drink para seu baseDrink
+            .collect(Collectors.toSet()) // Coleta para um Set para remover duplicatas
+            .stream()
+            .collect(Collectors.toList());
+        return baseDrinkList;
+    }
 
-       
-       
-       //FEITO PELO GPT
-        // ObjectMapper objectMapper = new ObjectMapper();
-        // TypeReference<List<Drink>> typeReference = new TypeReference<List<Drink>>() {};
-        // InputStream inputStream = TypeReference.class.getResourceAsStream("src/main/java/br/univille/drinkexpert/repository/database.json");
+    public List<String> getDrinkIngredients() {
+        Set<String> listaIngredientesHash = new HashSet<>();
+        for (Drink drink : drinkList) {
+            for (Ingrediente ingrediente : drink.getListIngredientes()){
+                listaIngredientesHash.add(ingrediente.getNome()); 
+            }
+        }
+        List<String> listaIngrientes = new ArrayList<>(listaIngredientesHash);
+        return listaIngrientes;
+    }
 
-        // try {
-        //     List<Drink> drinks = objectMapper.readValue(inputStream, typeReference); //erro json
-        //     drinkRepository.saveAll(drinks);
-        //     System.out.println("Drinks loaded and saved to the database!");
-        // } catch (IOException e) {
-        //     System.out.println("Unable to load drinks: " + e.getMessage());
-        // }
+    public List<String> getDrinkCaracteristics() {
+        Set<String> listaCaracteristicsHash = new HashSet<>();
+        for (Drink drink : drinkList) {
+                listaCaracteristicsHash.add(drink.getCaracteristica()); 
+            }
+        List<String> listaCaracteristicas = new ArrayList<>(listaCaracteristicsHash);
+        return listaCaracteristicas;
     }
 }
 

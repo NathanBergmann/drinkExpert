@@ -24,7 +24,7 @@ public class Drink {
     private String caracteristica;
     private ArrayList<Ingrediente> listaIngredientes = new ArrayList<Ingrediente>();
 
-    private ArrayList<Drink> drinks = new ArrayList<Drink>();
+    // private ArrayList<Drink> drinks = new ArrayList<Drink>();
 
     public Drink(){
         return;
@@ -50,6 +50,10 @@ public class Drink {
         return baseDrink;
     }
 
+    public ArrayList<Ingrediente> getIngredientes(){
+        return this.listaIngredientes;
+    }
+
     public void setBaseDrink(String baseDrink) {
         this.baseDrink = baseDrink;
     }
@@ -70,9 +74,9 @@ public class Drink {
         this.caracteristica = caracteristica;
     }
 
-    public void addDrink(Drink drink) {
-        this.drinks.add(drink);
-    }
+    // public void addDrink(Drink drink) {
+    //     this.drinks.add(drink);
+    // }
 
     public void setListIngredientes(ArrayList<Ingrediente> lista){
         this.listaIngredientes = lista;

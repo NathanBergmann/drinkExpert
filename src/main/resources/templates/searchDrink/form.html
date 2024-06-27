@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head  th:replace="template :: htmlhead">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Drink</title>
-</head>
+    <head th:include="template :: htmlhead"></head>
 <body class="d-flex justify-content-center vh-100">
     <div class="container">
-        <form th:action="@{/searchDrink}"
+        <!-- <form th:action="@{/searchDrink}"
             method="post"
-        >
+            th:object="${listBaseDrink}"
+        > -->
+        <form>
             <div class="mb-3 ">
                 <label class="form-label">Selecione a base alcoolica</label>
-                <input type="text" class="form-control" >
+                <select class="form-select" id="txtBaseDrink">
+                    <option selected></option>
+                    <option th:each="baseDrink : ${listBaseDrink}" th:text="${baseDrink}"></option>
+                </select>
             </div>
             <div class="mb-3 ">
                 <label class="form-label">Selecione algum ingredientes</label>
-                <input type="text" class="form-control" >
+                <select class="form-select" id="txtIngredientsDrink">
+                    <option selected></option>
+                    <option th:each="ingredients : ${listIngredientsDrink}" th:text="${ingredients}"></option>
+                </select>
             </div>
             <div class="mb-3 ">
                 <label class="form-label">Selecione uma caracteristica do Drink</label>
-                <input type="text" class="form-control" >
+                <select class="form-select" id="txtCaracteristicsDrink">
+                    <option selected></option>
+                    <option th:each="caracteristics : ${listCaracteristicsDrink}" th:text="${caracteristics}"></option>
+                </select>
             </div>
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary">Search</button>

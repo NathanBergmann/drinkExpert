@@ -7,31 +7,27 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import br.univille.drinkexpert.entity.Drink;
-import br.univille.drinkexpert.repository.DrinkRepository;
+import br.univille.drinkexpert.service.DrinkService;
 
 
 @Controller
 @RequestMapping("/searchDrink")
-
 public class DrinkController {
     
     @Autowired
-    private DrinkRepository drinkRepository;
-
-    @GetMapping("/")
-    public String redirectToSearchForm(){
-        return "redirect:/searchDrink/form";
-    }
-
-    @GetMapping("searchDrink/form")
-    public ModelAndView searchDrink(){
-        return new ModelAndView("searchDrink/form");
-    }
+    private DrinkService service;
 
     @GetMapping()
-    public List<Drink> getAllDrinks() {
-        return drinkRepository.findAll();
+    public ModelAndView searchDrink(){
+        List<String> listBaseDrink = service.getBaseDrinkList();
+        List<String> listIngredientsDrink = service.getDrinkIngredients();
+        List<String> listCaracteristicsDrink = service.getDrinkCaracteristics();
+
+        ModelAndView modelAndView = new ModelAndView("searchDrink/form");
+        modelAndView.addObject("listBaseDrink", listBaseDrink);
+        modelAndView.addObject("listIngredientsDrink", listIngredientsDrink);
+        modelAndView.addObject("listCaracteristicsDrink", listCaracteristicsDrink);
+        return modelAndView;
     }
+
 }
