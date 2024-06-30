@@ -35,7 +35,7 @@ public class Drink {
         setBaseDrink(baseDrink);
         setModoPreparo(modoPreparo);
         setCaracteristica(caracteristica);
-        setListIngredientes(listaIngredientes);
+        setListaIngredientes(listaIngredientes);
     }
 
     public String getNome() {
@@ -53,6 +53,10 @@ public class Drink {
     public ArrayList<Ingrediente> getIngredientes(){
         return this.listaIngredientes;
     }
+
+    public String getAllIngredientes(){
+        return this.listaIngredientes.toString();
+    } 
 
     public void setBaseDrink(String baseDrink) {
         this.baseDrink = baseDrink;
@@ -78,11 +82,15 @@ public class Drink {
     //     this.drinks.add(drink);
     // }
 
-    public void setListIngredientes(ArrayList<Ingrediente> lista){
+    public void setListaIngredientes(ArrayList<Ingrediente> lista){
         this.listaIngredientes = lista;
     }
 
-    public ArrayList<Ingrediente> getListIngredientes(){
+    // public void setListaIngredientes(String ingrediente){
+    //     this.listaIngredientes.add(ingrediente);
+    // }
+
+    public ArrayList<Ingrediente> getListaIngredientes(){
         return this.listaIngredientes;
     }
 

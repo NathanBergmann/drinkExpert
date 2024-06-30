@@ -3,30 +3,57 @@
     <head th:include="template :: htmlhead"></head>
 <body class="d-flex justify-content-center vh-100">
     <div class="container">
-        <!-- <form th:action="@{/searchDrink}"
-            method="post"
-            th:object="${listBaseDrink}"
-        > -->
+        <form th:action="@{/searchDrink/form}"
+            method="POST"
+            th:object="${drink}"
+        >
         <form>
             <div class="mb-3 ">
                 <label class="form-label">Selecione a base alcoolica</label>
-                <select class="form-select" id="txtBaseDrink">
-                    <option selected></option>
-                    <option th:each="baseDrink : ${listBaseDrink}" th:text="${baseDrink}"></option>
+                <select class="form-select" 
+                    th:field="*{baseDrink}"    
+                    id="txtBaseDrink">
+                    <option 
+                            selected
+                            value="">
+                    </option>
+                    <option th:each="baseDrink : ${listBaseDrink}"
+                            th:text="${baseDrink}"
+                            th:value="${baseDrink}">
+                    </option>
                 </select>
             </div>
             <div class="mb-3 ">
                 <label class="form-label">Selecione algum ingredientes</label>
-                <select class="form-select" id="txtIngredientsDrink">
-                    <option selected></option>
-                    <option th:each="ingredients : ${listIngredientsDrink}" th:text="${ingredients}"></option>
+                <select class="form-select"
+                    th:field="*{listaIngredientes}"    
+                    id="txtIngredientsDrink" >
+                    <option 
+                        selected
+                        value="">
+                    </option>
+                    <option 
+                        th:each="listaIngredientes : ${listIngredientsDrink}"
+                        th:text="${listaIngredientes}"
+                        th:value="${listaIngredientes}"
+                        >
+                    </option>
                 </select>
             </div>
             <div class="mb-3 ">
                 <label class="form-label">Selecione uma caracteristica do Drink</label>
-                <select class="form-select" id="txtCaracteristicsDrink">
-                    <option selected></option>
-                    <option th:each="caracteristics : ${listCaracteristicsDrink}" th:text="${caracteristics}"></option>
+                <select class="form-select"
+                    th:field="*{caracteristica}"    
+                    id="txtCaracteristicsDrink">
+                    <option
+                        selected
+                        value="">
+                    </option>
+                    <option
+                        th:each="caracteristics : ${listCaracteristicsDrink}"
+                        th:text="${caracteristics}"
+                        th:value="${caracteristics}">
+                    </option>
                 </select>
             </div>
             <div class="mb-3">

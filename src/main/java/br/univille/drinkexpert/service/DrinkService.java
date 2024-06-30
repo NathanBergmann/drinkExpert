@@ -1,21 +1,15 @@
 package br.univille.drinkexpert.service;
 
 import br.univille.drinkexpert.entity.Drink;
-import br.univille.drinkexpert.entity.DrinkCatalog;
 import br.univille.drinkexpert.entity.Ingrediente;
-import br.univille.drinkexpert.repository.DrinkRepository;
 import jakarta.annotation.PostConstruct;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.hibernate.dialect.function.array.ArraySliceUnnestFunction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -26,13 +20,13 @@ import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
+import java.util.stream.Collectors;
+
 @Service
 public class DrinkService {
 
     private List<Drink> drinkList = new ArrayList<Drink>();
 
-    @Autowired
-    private DrinkRepository drinkRepository;
 
     @PostConstruct
     public void init() {
@@ -83,7 +77,7 @@ public class DrinkService {
     public List<String> getDrinkIngredients() {
         Set<String> listaIngredientesHash = new HashSet<>();
         for (Drink drink : drinkList) {
-            for (Ingrediente ingrediente : drink.getListIngredientes()){
+            for (Ingrediente ingrediente : drink.getListaIngredientes()){
                 listaIngredientesHash.add(ingrediente.getNome()); 
             }
         }
@@ -98,6 +92,25 @@ public class DrinkService {
             }
         List<String> listaCaracteristicas = new ArrayList<>(listaCaracteristicsHash);
         return listaCaracteristicas;
+    }
+
+    public ArrayList<Drink> getResultDrinks(Drink drink){
+        
+        String ingrediente = drink.getIngredientes().stream()
+        .map(Ingrediente:: getNome)
+        .collect(Collectors.joining(" "));
+        String baseDrink = drink.getBaseDrink();
+        String caracteristica = drink.getCaracteristica();
+        drink.getIngredientes();
+        List<Drink> resultList = drinkList.stream()
+        .filter(filterDrink -> filterDrink.getBaseDrink().equalsIgnoreCase(baseDrink))
+        .filter(filterDrink -> filterDrink.getIngredientes().stream().anyMatch(ing -> ing.getNome().equalsIgnoreCase(ingrediente)))
+        .filter(filterDrink -> filterDrink.getCaracteristica().equalsIgnoreCase(caracteristica))
+        .collect(Collectors.toList());
+        
+        ArrayList<Drink> result = new ArrayList<>(resultList);
+
+        return result;
     }
 }
 

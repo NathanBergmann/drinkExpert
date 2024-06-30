@@ -20,6 +20,11 @@ public class Ingrediente {
         setQuantidade(quantidade);
         setUnidade(unidade);
     }
+
+    public Ingrediente(String nome){
+        setNome(nome);
+    }
+
     public String getNome() {
         return nome;
     }
@@ -37,5 +42,10 @@ public class Ingrediente {
     }
     public void setUnidade(String unidade) {
         this.unidade = unidade;
+    }
+
+    @Override
+    public String toString(){
+        return getQuantidade() + " " + getUnidade() + " de " + getNome() + "\n";
     }
 }
