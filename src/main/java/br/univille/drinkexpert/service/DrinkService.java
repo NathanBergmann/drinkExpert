@@ -102,11 +102,12 @@ public class DrinkService {
         String baseDrink = drink.getBaseDrink();
         String caracteristica = drink.getCaracteristica();
         drink.getIngredientes();
+
         List<Drink> resultList = drinkList.stream()
-        .filter(filterDrink -> filterDrink.getBaseDrink().equalsIgnoreCase(baseDrink))
-        .filter(filterDrink -> filterDrink.getIngredientes().stream().anyMatch(ing -> ing.getNome().equalsIgnoreCase(ingrediente)))
-        .filter(filterDrink -> filterDrink.getCaracteristica().equalsIgnoreCase(caracteristica))
-        .collect(Collectors.toList());
+            .filter(filterDrink -> baseDrink.isEmpty() || filterDrink.getBaseDrink().equalsIgnoreCase(baseDrink))
+            .filter(filterDrink -> ingrediente.isEmpty() || filterDrink.getIngredientes().stream().anyMatch(ing -> ing.getNome().equalsIgnoreCase(ingrediente)))
+            .filter(filterDrink -> caracteristica.isEmpty() || filterDrink.getCaracteristica().equalsIgnoreCase(caracteristica))
+            .collect(Collectors.toList());
         
         ArrayList<Drink> result = new ArrayList<>(resultList);
 

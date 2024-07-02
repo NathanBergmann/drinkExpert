@@ -27,6 +27,9 @@
                     <td th:text="${drink.getAllIngredientes()}"></td>
                     <td th:text="${drink.getModoPreparo}"></td>
                 </tr>
+                <tr>
+                    <a th:href="@{'/searchDrink'}" aria-current="page">Home</a>
+                </tr>
             </tbody>
         </table>
     </table>
